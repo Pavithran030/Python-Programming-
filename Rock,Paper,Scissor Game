@@ -1,0 +1,48 @@
+#Rock,Paper,Scissor Game without user interface using conditions
+
+import random
+print("Let's Play a simple rock,paper,scissor game using python programming......")
+def cwon():
+    print("Computer Won!!!")
+def pwon():
+    print("Player Won!!!")
+while True:
+    game=["rock","paper","scissor"]
+    choice =random.choice(game)
+    player=None
+    while player not in game:
+        player=input("rock,paper,scissor :? ")
+        if choice==player:
+            print("Tie!!")
+            print("Better luck next time....")
+        elif player=="rock":
+            if choice=="paper":
+                print("Computer : ",choice)
+                print("player : ",player)
+                cwon()
+            if choice=="scissor":
+                print("Computer : ",choice)
+                print("player : ",player)
+                pwon()
+        elif player=="scissor":
+            if choice=="rock":
+                print("Computer : ",choice)
+                print("player : ",player)
+                cwon()
+            if choice=="paper":
+                print("Computer : ",choice)
+                print("player : ",player)
+                pwon()
+        elif player=="paper":
+            if choice=="rock":
+                print("Computer : ",choice)
+                print("player : ",player)
+                pwon()
+            if choice=="scissor":
+                print("Computer : ",choice)
+                print("player : ",player)
+                cwon()
+    player1=input("Enter (yse/no) :? ")
+    if player1 not in "yes":
+        break
+print("Bye !!!")

@@ -11,8 +11,131 @@ for i in lst:
     od_sq.append(i**2)
 print(od,"\n",od_sq,"\n",ev,"\n",ev_sq)
 
-
-[1, 3, 5, 7, 9] 
+*****************************************************************************
+ [1, 3, 5, 7, 9] 
  [1, 9, 25, 49, 81] 
  [2, 4, 6, 8, 10] 
  [4, 16, 36, 64, 100]
+*****************************************************************************
+
+# 2
+
+lst=[4,6,2,7,8,9]
+big=0
+small=0
+for i in lst:
+    if i>big:
+      big=i
+    else:
+      small=i
+print(f"The biggest number is {big}\nThe smallest number is {small}")
+
+*****************************************************************************
+The biggest number is 9
+The smallest number is 2
+
+*****************************************************************************
+# 3
+
+lst=[3,4,5,7,2,9]
+big=0
+small=0
+for i in lst:
+  if i>big:
+    big=i
+  else:
+    small=i
+print(f"The second biggest number is {big}\nThe second smallest number is {small}")
+
+*****************************************************************************
+
+*****************************************************************************
+# 4
+
+lst=[3,5,2,1,4]
+lst1=lst
+k=len(lst)
+big=0
+for i in range(0,k):
+  for j in range(i,k):
+    if lst[i]>lst[j]:
+      tem=lst[i]
+      lst[i]=lst[j]
+      lst[j]=tem
+print(f"Ascending  order :{lst}")
+print(f"Descending order :{lst[::-1]}")
+
+*****************************************************************************
+Ascending  order :[1, 2, 3, 4, 5]
+Descending order :[5, 4, 3, 2, 1]
+
+*****************************************************************************
+# 5
+
+lt=[45,67,83,24,55,87,77,34]
+k=int(input("Enter the number to find the position :"))
+c=0
+for n in lt:
+  c+=1
+  if n==k:
+    break
+print(f"The Position of {k} is {c-1}")
+
+*****************************************************************************
+Enter the number to find the position :87
+The Position of 87 is 5
+*****************************************************************************
+
+# 6
+
+list1 = [4, 5, 6, 4, 6, 7, 4, 2, 4, 8, 4]
+dict1 = {}
+for el in list1:
+  if el in dict1:
+    dict1[el] += 1
+  else:
+    dict1[el] = 1
+max_value = max(dict1.values())
+max_key = max(dict1, key=dict1.get)
+
+print("The most frequent element is:", max_key)
+
+*****************************************************************************
+The most frequent element is: 4
+*****************************************************************************
+# 7
+
+di={}
+k= ['Ten', 'Twenty', 'Thirty']
+v= [10, 20, 30]
+for i in range(len(k)):
+  di[k[i]]=v[i]
+print(di)
+
+*****************************************************************************
+{'Ten': 10, 'Twenty': 20, 'Thirty': 30}
+*****************************************************************************
+
+# 10
+
+inpu= [0,1,0,1,1,0,1,0,1,0]
+k=len(inpu)
+lst=[]
+for i in inpu:
+  if i==0:
+    lst.append(i)
+j=len(lst)
+for i in range(0,j):
+  lst.append(1)
+
+print(lst)
+
+
+*****************************************************************************
+[0, 0, 0, 0, 0, 1, 1, 1, 1, 1]
+
+*****************************************************************************
+
+
+
+

@@ -1,0 +1,18 @@
+# 1
+
+lst=[1,2,3,4,5,6,7,8,9,10]
+od,ev,od_sq,ev_sq=[],[],[],[]
+for i in lst:
+  if i%2==0:
+    ev.append(i)
+    ev_sq.append(i**2)
+  else:
+    od.append(i)
+    od_sq.append(i**2)
+print(od,"\n",od_sq,"\n",ev,"\n",ev_sq)
+
+
+[1, 3, 5, 7, 9] 
+ [1, 9, 25, 49, 81] 
+ [2, 4, 6, 8, 10] 
+ [4, 16, 36, 64, 100]

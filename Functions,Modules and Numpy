@@ -1,0 +1,514 @@
+1.i.Write a Python module called math_operations.py that contains functions for addition, subtraction, multiplication, and division. Then, write another Python script that imports this module and uses its functions to perform operations on user-inputted numbers.
+# math_operations.py
+
+Def add(a, b):
+    Return a + b
+
+Def subtract(a, b):
+    Return a – b
+
+Def multiply(a, b):
+    Return a * b
+
+Def divide(a, b):
+    If b != 0:
+        Return a / b
+    Else:
+        Return “Division by zero is not allowed”
+
+
+# main.py
+
+Import math_operations as mo
+
+Num1 = float(input(“Enter first number: “))
+Num2 = float(input(“Enter second number: “))
+
+Print(f”Addition: {mo.add(num1, num2)}”)
+Print(f”Subtraction: {mo.subtract(num1, num2)}”)
+Print(f”Multiplication: {mo.multiply(num1, num2)}”)
+Print(f”Division: {mo.divide(num1, num2)}”)
+
+
+ii. Write a Python program to create an initial NumPy array with the elements [1, 2, 3]. Add the elements [4, 5, 6] to this array and print the resulting array.
+
+Import numpy as np
+
+Array = np.array([1, 2, 3])
+New_elements = np.array([4, 5, 6])
+Resulting_array = np.concatenate((array, new_elements))
+
+Print(resulting_array)
+
+2.i. Create a module named shapes.py with a class Rectangle that has methods to calculate the area and perimeter of a rectangle. Write a separate script to import this module and use the class to calculate the area and perimeter for given dimensions.
+# shapes.py
+
+Class Rectangle:
+    Def __init__(self, length, width):
+        Self.length = length
+        Self.width = width
+
+    Def area(self):
+        Return self.length * self.width
+
+    Def perimeter(self):
+        Return 2 * (self.length + self.width)
+
+# main.py
+
+From shapes import Rectangle
+
+Length = float(input(“Enter the length of the rectangle: “))
+Width = float(input(“Enter the width of the rectangle: “))
+
+Rect = Rectangle(length, width)
+Print(f”Area: {rect.area()}”)
+Print(f”Perimeter: {rect.perimeter()}”)
+
+ii. Write a Python program to create a NumPy array with elements [10, 20, 30, 40, 50]. Remove the third element (30) and print the resulting array.
+
+Import numpy as np
+
+Array = np.array([10, 20, 30, 40, 50])
+Resulting_array = np.delete(array, 2)
+
+Print(resulting_array)
+
+3.i. Write a Python program that uses the datetime module to print the current date and time, the day of the week, and the number of days until the end of the year.
+
+Now From datetime import datetime
+Now = datetime.now()
+
+End_of_year = datetime(now.year, 12, 31)
+
+Days_until_end_of_year = (end_of_year – now).days
+
+
+
+Print(f”Current date and time: {now}”)
+
+Print(f”Day of the week: {now.strftime(‘%A’)}”)
+
+Print(f”Days until the end of the year: {days_until_end_of_year}”)
+
+
+ii. Write a Python program that creates a NumPy array with elements [15, 23, 42, 56, 78] and prints each element using a loop.
+
+Import numpy as np
+
+Array = np.array([15, 23, 42, 56, 78])
+For element in array:
+    Print(element)
+
+4.i. Write a module called random_generator.py that contains functions to generate random integers, random floats, and random strings. Write a script to import this module and demonstrate the use of these functions.
+# random_generator.py
+
+Import random
+Import string
+
+Def random_integer(start, end):
+    Return random.randint(start, end)
+
+Def random_float(start, end):
+    Return random.uniform(start, end)
+
+Def random_string(length):
+    Letters = string.ascii_letters
+    Return ‘’.join(random.choice(letters) for I in range(length))
+
+# main.py
+
+Import random_generator as rg
+
+Print(f”Random Integer: {rg.random_integer(1, 100)}”)
+Print(f”Random Float: {rg.random_float(1.0, 10.0)}”)
+Print(f”Random String: {rg.random_string(8)}”)
+
+ii. Write a Python program that creates a NumPy array with the elements [12, 4, 7, 19, 3], sorts the array in ascending order, and prints the sorted array.
+
+Import numpy as np
+
+Array = np.array([12, 4, 7, 19, 3])
+Sorted_array = np.sort(array)
+
+Print(sorted_array)
+
+5.i.Create a module named file_operations.py that contains a function to read a file and handle exceptions if the file does not exist or cannot be read. Write a script to use this module to read a file and handle any potential errors gracefully.
+
+# file_operations.py
+
+Def read_file(filename):
+    Try:
+        With open(filename, ‘r’) as file:
+            Content = file.read()
+            Return content
+    Except FileNotFoundError:
+        Return “File not found”
+    Except IOError:
+        Return “Error reading file”
+
+# main.py
+
+Import file_operations as fo
+
+Filename = input(“Enter the filename: “)
+Content = fo.read_file(filename)
+Print(content)
+
+ii. Write a Python program to create a 1D NumPy array with elements [100, 200, 300, 400, 500]. Access and print the first, third, and last elements of the array using indexing.
+
+Import numpy as np
+
+Array = np.array([100, 200, 300, 400, 500])
+Print(f”First element: {array[0]}”)
+Print(f”Third element: {array[2]}”)
+Print(f”Last element: {array[-1]}”)
+
+6.i. Create a module named complex_calculations.py that contains functions to compute the Fibonacci sequence, factorial, and greatest common divisor (GCD). Write a script that imports this module and demonstrates the use of each function.
+
+# complex_calculations.py
+
+Def fibonacci(n):
+    Sequence = [0, 1]
+    While len(sequence) < n:
+        Sequence.append(sequence[-1] + sequence[-2])
+    Return sequence
+
+Def factorial(n):
+    If n == 0:
+        Return 1
+    Else:
+        Return n * factorial(n-1)
+
+Def gcd(a, b):
+    While b:
+        A, b = b, a % b
+    Return a
+
+# main.py
+
+Import complex_calculations as cc
+
+Print(f”Fibonacci sequence: {cc.fibonacci(10)}”)
+Print(f”Factorial of 5: {cc.factorial(5)}”)
+Print(f”GCD of 48 and 18: {cc.gcd(48, 18)}”)
+
+ii. Write a Python program to create a NumPy array with elements [5, 10, 15, 20, 25, 30, 35, 40]. Slice the array to get elements from index 2 to 5 and print the sliced array.
+
+Import numpy as np
+
+Array = np.array([5, 10, 15, 20, 25, 30, 35, 40])
+Sliced_array = array[2:6]
+
+Print(sliced_array)
+
+7.i. Write a function named greet that takes a name as a parameter and prints a greeting message. Call this function with different names to demonstrate its use.
+
+Def greet(name):
+    Print(f”Hello, {name}!”)
+
+Greet(“Alice”)
+Greet(“Bob”)
+Greet(“Charlie”)
+
+ii. Write a Python program that creates a 3x3 NumPy array with elements from 1 to 9. Extract the first row, the last column, and the element at the position (1,1) (second row, second column). Print the extracted parts.
+
+Import numpy as np
+
+Array = np.arange(1, 10).reshape(3, 3)
+First_row = array[0, :]
+Last_column = array[:, -1]
+Element_1_1 = array[1, 1]
+
+Print(f”First row: {first_row}”)
+Print(f”Last column: {last_column}”)
+Print(f”Element at (1,1): {element_1_1}”)
+
+
+8.i.Write a function called square that takes a number as an argument and returns its square. Use this function to print the squares of numbers from 1 to 10.
+
+Def square(number):
+    Return number ** 2
+
+For I in range(1, 11):
+    Print(f”Square of {i}: {square(i)}”)
+
+
+ii. Write a Python program to create a 1D NumPy array with elements [100, 200, 300, 400, 500]. Access and print the first, third, and last elements of the array using indexing.
+
+import numpy as np
+
+array = np.array([100, 200, 300, 400, 500])
+print(f"First element: {array[0]}")
+print(f"Third element: {array[2]}")
+print(f"Last element: {array[-1]}")
+
+9.i. Create a function named calculate_area that takes two parameters: length and width with a default
+Array = np.array([100, 200, 300, 400, 500])
+Print(f”First element: {array[0]}”)
+Print(f”Third element: {array[2]}”)
+value of width being 1. This function should return the area of a rectangle. Test this function with different combinations of parameters.
+
+Def calculate_area(length, width=1): 
+    Return length * width
+
+Print(f”Area with length 5 and width 2: {calculate_area(5, 2)}”)
+Print(f”Area with length 7: {calculate_area(7)}”)
+
+
+ii.Write a Python program to create a NumPy array with elements [5, 10, 15, 20, 25, 30, 35, 40]. Slice the array to get elements from index 2 to 5 and print the sliced array.
+
+Import numpy as np
+
+Array = np.array([5, 10, 15, 20, 25, 30, 35, 40])
+Sliced_array = array[2:6]
+
+Print(sliced_array)
+
+
+10.i. Write a function named describe_person that takes a person's name and a few keyword arguments like age, city, and occupation. Print the information in a formatted string. Call this function with different sets of keyword arguments.
+
+Def describe_person(name, **kwargs):
+    Info = f”Name: {name}”
+    For key, value in kwargs.items():
+        Info += f”, {key.capitalize()}: {value}”
+    Print(info)
+
+Describe_person(“Alice”, age=30, city=”New York”, occupation=”Engineer”)
+Describe_person(“Bob”, age=25, city=”San Francisco”)
+
+ii. Write a Python program that creates a NumPy array with the elements [12, 4, 7, 19, 3], sorts the array in ascending order, and prints the sorted array.
+
+Import numpy as np
+
+Array = np.array([12, 4, 7, 19, 3])
+Sorted_array = np.sort(array)
+
+Print(sorted_array)
+
+11.i. Create a function named sum_all that takes any number of numeric arguments and returns their sum. Demonstrate this function with different numbers of arguments.
+
+Def sum_all(*args):
+    Return sum(args)
+
+# Demonstration
+Print(sum_all(1, 2, 3))  # Output: 6
+Print(sum_all(10, 20, 30, 40))  # Output: 100
+Print(sum_all(5))  # Output: 5
+
+ii. Write a Python program that loops through a dictionary of student names and their scores, printing each student's name and score.
+
+
+Students_scores = {
+    “Alice”: 85,
+    “Bob”: 92,
+    “Charlie”: 78,
+    “David”: 90
+}
+
+For student, score in students_scores.items():
+    Print(f”Student: {student}, Score: {score}”)
+
+12.i. Write a lambda function to filter a list of integers and return only the even numbers. Use this lambda function with the filter method to demonstrate its functionality.
+
+Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+
+Print(even_numbers)  # Output: [2, 4, 6, 8, 10]
+
+ii. Write a Python program that calculates the factorial of a given number using a while loop.
+
+Def factorial(n):
+    Result = 1
+    While n > 0:
+        Result *= n
+        N -= 1
+    Return result
+
+# Demonstration
+Print(factorial(5))  # Output: 120
+Print(factorial(7))  # Output: 5040
+
+13.i. Write a function named apply_function that takes a list and a function as arguments. It should return a new list with the function applied to each element of the original list. Test this with a few simple functions like doubling a number or squaring a number.
+
+
+Def apply_function(lst, func):
+    Return [func(x) for x in lst]
+
+# Simple functions
+Def double(x):
+    Return x * 2
+
+Def square(x):
+    Return x ** 2
+
+# Demonstration
+Numbers = [1, 2, 3, 4, 5]
+Print(apply_function(numbers, double))  # Output: [2, 4, 6, 8, 10]
+Print(apply_function(numbers, square))  # Output: [1, 4, 9, 16, 25]
+
+ii. Write a Python program to create a 1D NumPy array with elements [100, 200, 300, 400, 500]. Access and print the first, third, and last elements of the array using indexing.
+
+Import numpy as np
+
+Array = np.array([100, 200, 300, 400, 500])
+Print(f”First element: {array[0]}”)
+Print(f”Third element: {array[2]}”)
+Print(f”Last element: {array[-1]}”)
+
+14.i. Write a recursive function named factorial that computes the factorial of a given number. Demonstrate its use by calculating the factorial of 5, 7, and 10.
+
+Def factorial(n):
+    If n == 0:
+        Return 1
+    Else:
+        Return n * factorial(n-1)
+
+# Demonstration
+Print(factorial(5))  # Output: 120
+Print(factorial(7))  # Output: 5040
+Print(factorial(10))  # Output: 3628800
+
+
+ii. Write a Python program to create a NumPy array with elements [5, 10, 15, 20, 25, 30, 35, 40]. Slice the array to get elements from index 2 to 5 and print the sliced array.
+
+Import numpy as np
+
+Array = np.array([5, 10, 15, 20, 25, 30, 35, 40])
+Sliced_array = array[2:6]
+
+Print(sliced_array)  # Output: [15 20 25 30]
+
+
+15.i. Create a function named outer that contains an inner function named inner. The inner function should print a message, and the outer function should call the inner function and then print another message. Call the outer function to see the result
+
+Def outer():
+    Def inner():
+        Print(“Inner function message”)
+    Inner()
+    Print(“Outer function message”)
+
+# Demonstration
+Outer()
+
+ii. Write a Python program that creates a 1D NumPy array with elements from 1 to 12. Reshape this array into a 2D array with 3 rows and 4 columns, then print the reshaped array.
+
+
+Import numpy as np
+
+Array = np.arange(1, 13)
+Reshaped_array = array.reshape(3, 4)
+
+Print(reshaped_array)
+
+16.i. Write a function named divide that takes two arguments and returns their division. Include error handling to manage division by zero and return an appropriate message. Test this function with different inputs.
+
+Def divide(a, b):
+    Try:
+        Return a / b
+    Except ZeroDivisionError:
+        Return “Division by zero is not allowed”
+
+# Demonstration
+Print(divide(10, 2))  # Output: 5.0
+Print(divide(10, 0))  # Output: Division by zero is not allowed
+
+ii. Write a Python program that prints a multiplication table (from 1x1 to 10x10) using nested for loops.
+
+For I in range(1, 11):
+    For j in range(1, 11):
+        Print(f”{i} x {j} = {I * j}”)
+    Print()
+
+17.iWrite two simple functions, double and increment, where double doubles a number and increment adds one to a number. Create a new function named double_then_increment that applies both functions to a number, first doubling it and then incrementing the result. Demonstrate this function with a few examples.
+
+Def double(x):
+    Return x * 2
+
+Def increment(x):
+    Return x + 1
+
+Def double_then_increment(x):
+    Return increment(double(x))
+
+# Demonstration
+Print(double_then_increment(3))  # Output: 7
+Print(double_then_increment(5))  # Output: 11
+
+ii. Write a Python program that prints the numbers from 1 to 20 using a for loop.
+
+
+For I in range(1, 21):
+    Print(i)
+
+18.i. Write a Python program that prints the numbers from 1 to 20 using a while loop.
+
+I = 1
+While I <= 20:
+    Print(i)
+    I += 1
+
+ii. Write a Python program to create a NumPy array of 10 zeros, another of 10 ones, and a third array of 10 fives.
+
+Import numpy as np
+
+Zeros_array = np.zeros(10)
+Ones_array = np.ones(10)
+Fives_array = np.full(10, 5)
+
+Print(zeros_array)
+Print(ones_array)
+Print(fives_array)
+
+
+19.i. Write a Python program that takes a list of words and counts the occurrences of each word using a for loop and a dictionary.
+
+Words = [“apple”, “banana”, “apple”, “orange”, “banana”, “apple”]
+Word_count = {}
+
+For word in words:
+    If word in word_count:
+        Word_count[word] += 1
+    Else:
+        Word_count[word] = 1
+
+Print(word_count)
+
+ii. Write a Python program that creates a NumPy array with integers, another with floats, and another with strings. Print the data type of each array.
+
+
+Import numpy as np
+
+Int_array = np.array([1, 2, 3, 4, 5])
+Float_array = np.array([1.1, 2.2, 3.3, 4.4, 5.5])
+Str_array = np.array([“a”, “b”, “c”, “d”, “e”])
+
+Print(int_array.dtype)
+Print(float_array.dtype)
+Print(str_array.dtype)
+
+20.i. Write a Python program that searches for a specific number in a list. If the number is found, print "Found". If the loop completes without finding the number, print "Not Found". Use the else clause with the loop.
+
+
+Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Search_number = 5
+
+For number in numbers:
+    If number == search_number:
+        Print(“Found”)
+        Break
+Else:
+    Print(“Not Found”)
+
+ii. Write a Python program that creates a NumPy array with integers, another with floats, and another with strings. Print the data type of each array.
+
+Import numpy as np
+
+Int_array = np.array([1, 2, 3, 4, 5])
+Float_array = np.array([1.1, 2.2, 3.3, 4.4, 5.5])
+Str_array = np.array([“a”, “b”, “c”, “d”, “e”])
+
+Print(int_array.dtype)
+Print(float_array.dtype)
+Print(str_array.dtype)
+
